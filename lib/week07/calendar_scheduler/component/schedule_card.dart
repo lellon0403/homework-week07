@@ -46,3 +46,13 @@ class ScheduleCard extends StatelessWidget{
     );
   }
 }
+
+class _Time extends StatelessWidget{  
+  final int startTime; //시작 시간
+  final int endTime; //종료 시간
+
+  const _Time({
+    required this.startTime;
+    required this.endTime;
+  })
+}
