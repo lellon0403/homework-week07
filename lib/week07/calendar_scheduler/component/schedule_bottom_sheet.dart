@@ -25,7 +25,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet>{
   String? content; //일정 내용 저장 변수
 
   @override
-  Widget buid(BuildContext context) {
+  Widget build(BuildContext context) {
     //키보드 높이 가져오기
     final bottomInset = MediaQuery.of(context).viewInsets.bottom;
     return Form( //텍스트 필드를 한 번에 관리할 수 있는 폼
