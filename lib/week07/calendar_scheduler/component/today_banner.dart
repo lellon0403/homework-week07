@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class TodayBanner extends StatelessWidget{
   final DateTime selectedDate; //선택된 날짜
-  final int count; 일정 개수
+  final int count; //일정 개수
 
   const TodayBanner({
     required this.selectedDate,
@@ -27,12 +27,12 @@ class TodayBanner extends StatelessWidget{
           children: [
             Text( //"년 월 일 " 형태로 표시
             '${selectedDate.year}년 ${selectedDate.month}월 ${selectedDate.day}일',
-            style: textstyle,
+            style: textStyle,
             ),
 
             Text(
               '$count개', //일정 개수 표시
-              style: textstyle,
+              style: textStyle,
             )
           ],
         ),
