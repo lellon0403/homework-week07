@@ -23,7 +23,7 @@ class LocalDatabase extends _$LocalDatabase {
   //데이터를 조회하고 변화 감지
   (select(schedules)..where((tbl) => tbl.date.equals(date))).watch();
   //watch 함수 아래에 작성
-  Future<int> createSchedule(SchedulesCompanion date) =>
+  Future<int> createSchedule(SchedulesCompanion data) =>
   into(schedules).insert(data);
 
   Future<int> removeSchedule(int id) =>
