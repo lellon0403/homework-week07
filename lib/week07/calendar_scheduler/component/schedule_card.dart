@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ScheduleCard extends StatelessWidget{ 
   final int startTime;
   final int endTime;
-  final int content;
+  final String content;
 
   const ScheduleCard({  
     required this.startTime,
