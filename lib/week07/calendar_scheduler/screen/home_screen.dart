@@ -98,17 +98,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               endTime: schedule.endTime,
                               content: schedule.content,
                             ),
-                            ),
-                          );
-                        )
+                          ),
+                        );
                       },
-                    )
-                  },
-               )
-              )
-            ],
-          )
-        )
+                    );
+                  }
+               ),
+              ),
+            ],),
+        ),
     );
   }
-}
+
+  
