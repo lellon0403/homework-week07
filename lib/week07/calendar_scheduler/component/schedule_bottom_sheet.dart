@@ -84,6 +84,14 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet>{
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton( //저장 버튼
+                    //[저장] 버틴
+                    onPressed: onSavePressed,
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: PRIMARY_COLOR,
+                    ),
+                    child: Text('저장'),
+
                   ),
                 )
               ],
@@ -94,4 +102,6 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet>{
 
     );
   }
+
+  
 }
