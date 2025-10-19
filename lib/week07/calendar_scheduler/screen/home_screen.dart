@@ -72,10 +72,10 @@ class _HomeScreenState extends State<HomeScreen> {
               //일정 정보가 Stream으로 제공되기 때문에 StreamBuilder 사용
                child: StreamBuilder<List<Schedule>>(
                   stream: GetIt.I<LocalDatabase>().watchSchedules(selectedDate),
-                  builder: (context snapshot){
+                  builder: (context,snapshot){
                     if(!snapshot.hasData){ //데이터가 없을때
                     return Container();
-                    }
+                    },
                     //화면에 보이는 값들만 렌더링하는 리스트
                     return ListView.builder(
                       //리스트에 입력할 값들의 총 개수
