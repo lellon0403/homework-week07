@@ -13,8 +13,8 @@ class TodayBanner extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle = TextStyle( //기본으로 사용할 글꼴
-      FontWeight: FontWeight.w600,
+    final textStyle = TextStyle( //기본으로 사용할 글꼴
+      fontWeight: FontWeight.w600,
       color: Colors.white,
     );
 
@@ -30,6 +30,10 @@ class TodayBanner extends StatelessWidget{
             style: textstyle,
             ),
 
+            Text(
+              '$count개', //일정 개수 표시
+              style: textstyle,
+            )
           ],
         ),
       ),
