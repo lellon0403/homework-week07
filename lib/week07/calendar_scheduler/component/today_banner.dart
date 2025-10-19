@@ -19,7 +19,20 @@ class TodayBanner extends StatelessWidget{
     );
 
     return Container(
-      
-    )
+      color: PRIMARY_COLOR,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal:16.0,vertical: 8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text( //"년 월 일 " 형태로 표시
+            '${selectedDate.year}년 ${selectedDate.month}월 ${selectedDate.day}일',
+            style: textstyle,
+            ),
+
+          ],
+        ),
+      ),
+    );
   }
 }
