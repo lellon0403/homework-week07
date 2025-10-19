@@ -52,10 +52,10 @@ class _Time extends StatelessWidget{
   final int endTime; //종료 시간
 
   const _Time({
-    required this.startTime;
-    required this.endTime;
-    Key? key
-  }) : super (key: key);
+    required this.startTime,
+    required this.endTime,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context){
