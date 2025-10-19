@@ -35,7 +35,7 @@ class ScheduleCard extends StatelessWidget{
               ),
               SizedBox(width: 16.0,),
               _Content( //일정 내용을 보여줄 위젯
-                context: content,
+                content: content,
               ),
               SizedBox(width: 16.0,),
             ],
