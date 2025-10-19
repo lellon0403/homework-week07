@@ -9,7 +9,7 @@ import 'package:get_it/get_it.dart';
 import 'package:myapp/week07/calendar_scheduler/database/drift_database.dart';
 
 class HomeScreen extends StatefulWidget{
-  const HomeScreen(Key? key) : super(key : key);
+  const HomeScreen({Key? key}) : super(key : key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     if(!snapshot.hasData){ //데이터가 없을때
                     return Container();
                     }
-                    
+
                     //화면에 보이는 값들만 렌더링하는 리스트
                     return ListView.builder(
                       //리스트에 입력할 값들의 총 개수
