@@ -29,8 +29,18 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet>{
     //키보드 높이 가져오기
     final bottomInset = MediaQuery.of(context).viewInsets.bottom;
     return Form( //텍스트 필드를 한 번에 관리할 수 있는 폼
-      key: formKey,
-      
+      key: formKey, //Form 을 조작할 키값
+      child: SafeArea(
+        child: Container(
+          height: MediaQuery.of(context).size.height /2 + bottomInset, //
+          color: Colors.white,
+          child: Padding(
+            padding: EdgeInsets.only(left: 8,right: 8,
+            top: 8,bottom: bottomInset), //패딩에 키보드 높이 추가해서 위젯 전반적으로 위로 올려주기
+            
+          ),
+        ),
+      ),
 
     );
   }
