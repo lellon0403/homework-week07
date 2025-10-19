@@ -102,5 +102,45 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet>{
     );
   }
 
+  void onSavePressed() async{
+    if(formKey.currentState!.validate()){ //폼 검증하기
+      formKey.currentState!.save();
 
+      await GetIt.I<LocalDatabase>().createSchedule( //일정 생성하기
+        SchedulesCompanion(
+          startTime: Value(startTime!),
+          endTime: Value(endTime!),
+          content: Value(content!),
+          date: Value(widget.selectedDate),
+        ),
+      );
+      Navigator.of(context).pop(); //일정 생성 후 화면 뒤로 가기
+    }
+  }
+
+  String? timeValidator(String? val) {  
+    if(val == null) {
+      return '값을 입력해주세요';
+    }
+    int? number;
+
+    try{
+      number = int.parse(val);
+    }catch(e) {
+      return '숫자를 입력해주세요';
+    }
+    
+    if(number < 0 || number > 24) {
+      return '0시부터 24시 사이를 입력해주세요';
+    }
+
+    return null;
+  } //시간값 검증
+
+  String? contentValidator(String? val) { //내용 검증 함수
+    if(val == null || val.length == 0){ 
+      return '값을 입력해주세요';
+    }
+    return null;
+  } //내용값 검증
 }
