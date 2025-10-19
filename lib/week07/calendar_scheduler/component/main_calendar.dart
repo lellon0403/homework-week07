@@ -24,7 +24,10 @@ class MainCalendar extends StatelessWidget{
         firstDay: DateTime(1800,1,1), //첫째 날
         lastDay: DateTime(3000,1,1), //마지막 날
         focusedDay: DateTime.now(), //화면에 보여지느날
-        
+        headerStyle: HeaderStyle( //달력 최상단 스타일
+          titleCentered: true,
+                  
+        ),
     );
   }
 }
