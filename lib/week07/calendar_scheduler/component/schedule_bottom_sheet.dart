@@ -53,7 +53,20 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet>{
                       },
                       validator: timeValidator,
                       ),
-                    )
+                    ),
+
+                    const SizedBox(width: 16.0,),
+                    Expanded(
+                      child: CustomTextField( //종료 시간 입력 필드
+                        label: '종료 시간',
+                        isTime: true,
+                        onSaved: (String? val){ 
+                          //저장이 실행되면 endTime 변수에 텍스트 필드값 저장
+                          endTime = int.parse(val!);
+                        }, 
+                        validator: timeValidator,
+                      ),
+                    ),
                   ],
                 )
               ],
