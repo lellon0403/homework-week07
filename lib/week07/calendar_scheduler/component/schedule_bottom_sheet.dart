@@ -80,7 +80,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet>{
                     },
                     validator: contentValidator,
                   ),
-                )
+                ),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton( //저장 버튼
