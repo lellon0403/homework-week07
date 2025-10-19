@@ -9,7 +9,7 @@ import 'dart:io';
 //private값까지 불러올 수 있음
 part 'drift_database.g.dart'; //part 파일 지정
 
-@dDriftDatabase( //사용할 테이블 등록
+@DriftDatabase( //사용할 테이블 등록
 tables: [
   Schedules,
 ],
