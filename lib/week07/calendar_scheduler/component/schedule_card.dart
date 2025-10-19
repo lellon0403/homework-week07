@@ -97,7 +97,7 @@ class _Content extends StatelessWidget{
   Widget build(BuildContext context){
     return Expanded( //최대한 넓게 늘리기
       child: Text(
-        context,
+        content,
       ),
     );
   }
