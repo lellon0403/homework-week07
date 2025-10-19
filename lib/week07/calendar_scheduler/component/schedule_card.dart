@@ -25,7 +25,7 @@ class ScheduleCard extends StatelessWidget{
       ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: IntrinsicHeight( 높이를 내부 위젯들의 최대 높이로 설정
+        child: IntrinsicHeight( // 높이를 내부 위젯들의 최대 높이로 설정
         ),
       ),
       
